@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Add To Cart App</title>
+</head>
+<body>
+
+      <nav class="navbar">
+        <div class="logo">Shopee.</div>
+        <div class="cart-btn-wrapper" onclick="toggleCart()">
+            <i class="fas fa-shopping-cart cart-icon"></i>
+            <span class="cart-count" id="cartCount">0</span>
+        </div>
+      </nav>
+
+      <!-- Product Listing Section -->
+       <div class="container">
+        <h2 class="section-title">Latest Products</h2>
+        <div class="product-grid" id="productGrid"></div>
+       </div>
+
+       <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+       <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <span class="close-cart" onclick="toggleCart()">&times;</span>
+        </div>
+
+        <div class="cart-items-container" id="cartItemsContainer">
+              <!-- 8️⃣ Empty State default here -->
+        </div>
+
+        <div class="cart-footer">
+            <div class="total-row">
+                <span>Total: </span>
+                <span id="cartTotal">₹0.00</span>
+            </div>
+            <button class="clear-btn" onclick="clearCart()">Clear Cart</button>
+        </div>
+       </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
